@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+venv/
+.env
+data/media/*
+!data/media/.gitkeep
+data/civicpulse.db

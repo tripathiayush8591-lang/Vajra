@@ -1,0 +1,621 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-ink font-sans antialiased;
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 8% 8%, rgba(37, 99, 235, 0.14) 0px, transparent 40%),
+    radial-gradient(circle at 92% 12%, rgba(6, 182, 212, 0.16) 0px, transparent 45%),
+    radial-gradient(circle at 50% 45%, rgba(139, 92, 246, 0.11) 0px, transparent 50%),
+    radial-gradient(circle at 88% 85%, rgba(244, 63, 94, 0.10) 0px, transparent 40%),
+    radial-gradient(circle at 12% 85%, rgba(16, 185, 129, 0.12) 0px, transparent 45%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   LIQUID GLASS DESIGN SYSTEM
+   Ultra-refractive optical glass with vivid chromatic radiance & fluid gloss
+   ========================================================================== */
+
+.glass,
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.52) 50%, rgba(255, 255, 255, 0.72) 100%);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  box-shadow:
+    0 12px 36px -4px rgba(37, 99, 235, 0.09),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.glass-deep,
+.liquid-glass-deep {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 250, 252, 0.88) 100%);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 16px 40px -8px rgba(30, 58, 138, 0.12),
+    0 6px 18px -2px rgba(15, 23, 42, 0.06),
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(203, 213, 225, 0.25);
+}
+
+/* Liquid Tab Track */
+.glass-tab-track,
+.liquid-tab-track {
+  background: rgba(241, 245, 249, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.glass-tab-track-dark,
+.liquid-tab-track-dark {
+  background: #0d1117;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #21262d !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Liquid Tab Inactive Item - Normal Refined Border */
+.glass-tab-item,
+.liquid-tab-item {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+.glass-tab-item:hover,
+.liquid-tab-item:hover {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+  transform: none;
+}
+
+/* Liquid Active Tab - Light Pearl */
+.glass-tab-item-active,
+.liquid-tab-item-active-light {
+  background: #ffffff !important;
+  border: 1px solid rgba(203, 213, 225, 0.8) !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Liquid Active Tab - Vivid Sapphire / Electric Cobalt */
+.glass-tab-item-civic-active,
+.liquid-tab-item-active-civic {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
+  text-shadow: none;
+}
+
+/* Liquid Active Tab - Vivid Solar Amber Gold */
+.glass-tab-item-dark-active,
+.liquid-tab-item-active-official {
+  background: linear-gradient(135deg, #d97706 0%, #ea580c 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35) !important;
+  text-shadow: none;
+}
+
+/* Vivid Liquid Category Presets with Normal Border */
+.liquid-tab-active-emerald {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+  text-shadow: none;
+}
+
+.liquid-tab-active-amber {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3) !important;
+  text-shadow: none;
+}
+
+.liquid-tab-active-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%) !important;
+  border: 1px solid rgba(14, 165, 233, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3) !important;
+  text-shadow: none;
+}
+
+.liquid-tab-active-violet {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3) !important;
+  text-shadow: none;
+}
+
+.liquid-tab-active-rose {
+  background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%) !important;
+  border: 1px solid rgba(244, 63, 94, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.3) !important;
+  text-shadow: none;
+}
+
+/* Card classes for consistent elevation */
+.card-base {
+  @apply bg-white border border-slate-200/90 rounded-2xl shadow-card transition-all duration-200;
+}
+
+.card-interactive {
+  @apply bg-white border border-slate-200/90 rounded-2xl shadow-card hover:shadow-card-hover hover:border-slate-300 transition-all duration-200;
+}
+
+/* Light Mode Typography Contrast Enhancements (Prevents washed-out/faint text) */
+html:not(.dark) .text-slate-500 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-muted {
+  color: #475569 !important;
+}
+
+/* Leaflet light map styling */
+.leaflet-container {
+  @apply rounded-2xl z-0;
+  background: #f1f5f9 !important;
+  font-family: inherit;
+}
+
+/* Clean standard tiles - no dark invert */
+.leaflet-tile {
+  filter: contrast(1.03) saturate(1.05);
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  font-weight: bold !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f8fafc !important;
+  color: #1d4ed8 !important;
+}
+
+.leaflet-tooltip {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+  box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.25) !important;
+  backdrop-filter: blur(4px);
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: #0f172a !important;
+}
+
+.leaflet-tooltip-bottom:before {
+  border-bottom-color: #0f172a !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300/80 rounded-full hover:bg-slate-400;
+}
+
+/* Forms */
+input, select, textarea {
+  @apply bg-white text-ink border border-slate-200 rounded-xl transition-all duration-150;
+}
+input:focus, select:focus, textarea:focus {
+  @apply border-civic ring-2 ring-civic/20 outline-none;
+}
+input::placeholder, textarea::placeholder {
+  @apply text-slate-400;
+}
+select option {
+  @apply bg-white text-ink py-1;
+}
+
+/* Pulsing beacon animation */
+@keyframes beacon-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.pulse-beacon {
+  animation: beacon-pulse 2s infinite;
+}
+
+/* ==========================================================================
+   PITCH BLACK EXACT THEME (MATCHING REFERENCE APP)
+   Pure #000000 OLED Background, Dark Crisp Slate-Black Cards (#0d0f14),
+   Pill Navbar Tabs, Neon Cyan/Mint/Amber/Rose Accents, High-Contrast White Text
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark,
+html.dark body {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+/* Reference Card Surface: Dark charcoal/black with subtle rounded border */
+html.dark .card-base,
+html.dark .card-interactive,
+html.dark .liquid-glass,
+html.dark .liquid-glass-deep,
+html.dark .glass,
+html.dark .glass-deep {
+  background-color: #0b0d11 !important;
+  background: #0b0d11 !important;
+  border: 1px solid #1e2430 !important;
+  border-radius: 1rem !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html.dark .card-interactive:hover,
+html.dark .liquid-glass:hover {
+  border-color: #2e384d !important;
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Reference Navbar Pill Tab Track - Subtle Normal Border */
+html.dark .liquid-tab-track,
+html.dark .glass-tab-track {
+  background: #0d1117 !important;
+  border: 1px solid #21262d !important;
+  border-radius: 9999px !important;
+  padding: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Reference Inactive Tabs - Normal Refined Border */
+html.dark .liquid-tab-item,
+html.dark .glass-tab-item {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 9999px !important;
+  color: #8b949e !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+html.dark .liquid-tab-item:hover,
+html.dark .glass-tab-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Reference Active Pill Tab - Normal Refined Border & Vibrant Core */
+html.dark .liquid-tab-item-active-civic {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  border-radius: 9999px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4) !important;
+  text-shadow: none !important;
+}
+
+html.dark .liquid-tab-item-active-official {
+  background: linear-gradient(135deg, #d97706 0%, #ea580c 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  border-radius: 9999px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.4) !important;
+  text-shadow: none !important;
+}
+
+html.dark .liquid-tab-item-active-light,
+html.dark .glass-tab-item-active {
+  background: #161b22 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 9999px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: none !important;
+}
+
+/* Reference Tag / Pill Chips with Normal Border */
+html.dark .dataset-chip {
+  background: #090c10 !important;
+  border: 1px solid #21262d !important;
+  color: #c9d1d9 !important;
+  border-radius: 9999px !important;
+}
+
+/* Reference Category / Active Button Variants with Normal Border */
+html.dark .liquid-tab-active-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35) 0%, rgba(6, 182, 212, 0.25) 100%) !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+  text-shadow: none !important;
+}
+
+html.dark .liquid-tab-active-amber {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.35) 0%, rgba(244, 63, 94, 0.25) 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3) !important;
+  text-shadow: none !important;
+}
+
+html.dark .liquid-tab-active-cyan {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.35) 0%, rgba(6, 182, 212, 0.25) 100%) !important;
+  border: 1px solid rgba(14, 165, 233, 0.4) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3) !important;
+  text-shadow: none !important;
+}
+
+html.dark .liquid-tab-active-rose {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.35) 0%, rgba(225, 29, 72, 0.25) 100%) !important;
+  border: 1px solid rgba(244, 63, 94, 0.4) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.3) !important;
+  text-shadow: none !important;
+}
+
+/* Reference Badge / Chip Overrides */
+html.dark .bg-emerald-50 {
+  background-color: #062016 !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+html.dark .bg-amber-50 {
+  background-color: #201505 !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+html.dark .bg-rose-50 {
+  background-color: #260a12 !important;
+  color: #fb7185 !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: #081827 !important;
+  color: #38bdf8 !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Navbar in Dark Mode */
+html.dark nav.liquid-glass {
+  background: #000000 !important;
+  border-bottom: 1px solid #161b24 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: none !important;
+}
+
+/* High Contrast Pure White & Silver Typography */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+html.dark .text-ink {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400,
+html.dark .text-muted {
+  color: #8b98a9 !important;
+}
+
+/* Background Surface Overrides */
+html.dark .bg-white {
+  background-color: #0b0d11 !important;
+  color: #ffffff !important;
+}
+
+html.dark .bg-white\/70,
+html.dark .bg-white\/80,
+html.dark .bg-white\/90,
+html.dark .bg-white\/95 {
+  background-color: #0f131a !important;
+  color: #ffffff !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/40,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/90,
+html.dark .bg-slate-100 {
+  background-color: #10141b !important;
+  color: #ffffff !important;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-200\/60,
+html.dark .border-slate-200\/70,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-100 {
+  border-color: #1a202c !important;
+}
+
+html.dark .border-slate-300 {
+  border-color: #273042 !important;
+}
+
+/* Input Fields & Textareas: Match Reference Pill/Box Search */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #07090c !important;
+  color: #ffffff !important;
+  border: 1px solid #1e2430 !important;
+  border-radius: 0.75rem !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.25) !important;
+  outline: none !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #556275 !important;
+}
+
+html.dark select option {
+  background-color: #07090c !important;
+  color: #ffffff !important;
+}
+
+/* Reference Action Pill Button (like "Analyse Water" green pill button) */
+html.dark .btn-brand-pill {
+  background: #052e16 !important;
+  border: 1px solid #10b981 !important;
+  color: #34d399 !important;
+  border-radius: 9999px !important;
+}
+
+/* Leaflet Map: Dark Carto / Inverted Midnight Map matching reference Hotspot Map */
+html.dark .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7) !important;
+}
+
+html.dark .leaflet-container {
+  background: #05070a !important;
+  border: 1px solid #181d26 !important;
+}
+
+html.dark .leaflet-control-zoom {
+  border: 1px solid #1e2430 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+html.dark .leaflet-control-zoom a {
+  background: #0a0d12 !important;
+  color: #ffffff !important;
+  border-color: #1e2430 !important;
+}
+
+html.dark .leaflet-control-zoom a:hover {
+  background: #141923 !important;
+  color: #38bdf8 !important;
+}
+
+html.dark .leaflet-tooltip {
+  background: #090c10 !important;
+  color: #ffffff !important;
+  border: 1px solid #232b3a !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Reference Scrollbars */
+html.dark ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1c222e;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #2b3547;
+}
+
+/* Recharts Dark Mode Visuals matching Reference Charts */
+html.dark .recharts-text,
+html.dark .recharts-cartesian-axis-tick text {
+  fill: #7d8b9e !important;
+  font-size: 11px !important;
+}
+
+html.dark .recharts-cartesian-grid-horizontal line,
+html.dark .recharts-cartesian-grid-vertical line {
+  stroke: #141922 !important;
+}
+
+
