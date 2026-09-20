@@ -20,6 +20,15 @@
 11. [Demo Accounts & 5-Minute Demo Script](#-demo-accounts--5-minute-demo-script)
 12. [API Reference](#-api-reference)
 13. [Design Documentation](#-design-documentation)
+14. [Live Demo](#-live-demo)
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Frontend (Vercel):** [https://vajra-two.vercel.app/](https://vajra-two.vercel.app/)
+
+> ⚠️ **Disclaimer:** The backend is hosted on [Render](https://render.com/) free tier. Due to Render's free tier limitations, the backend **spins down after 10 minutes of inactivity**. The first request after idle may take **30–60 seconds** while the server cold-starts. Subsequent requests will be fast. Apologies for the inconvenience — this is a constraint of free-tier hosting during the hackathon.
 
 ---
 
